@@ -40,29 +40,13 @@ ul{
     background: var(--bg-black-900);
     min-height: 100vh;
     display: block;
-    padding: 0 30px;
+    padding: 40px 20px;
     opacity: 1;
 }
 
 .hidden{
     display: none;
 }
-
-/* .check{
-    display: block !important;
-} */
-
-
-/* .about{
-    position: fixed;
-    right: 0;
-    transition: all 0.3s ease;
-    transform: translateX(100%);
-}
-
-.about.open{
-    transform: translateX(-25px);
-} */
 
 
 .main-content{
@@ -74,21 +58,12 @@ ul{
     padding-right: 15px;
 }
 
-.container{
-    max-width: 1100px;
-    width: 100%;
-    margin: auto;
-}
 
-.section .container{
-    padding-top: 60px;
-    padding-bottom: 70px;
-}
 
 .section-title{
     flex: 0 0 100%;
     max-width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .section-title h2{
@@ -121,15 +96,8 @@ ul{
     margin-top: 8px;
 }
 
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
-    position: relative;
-}
 
-.btn{
+.btn1{
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -143,13 +111,15 @@ ul{
     transition: all 0.3s ease;
 }
 
-.btn:hover{
+a{
+    text-decoration: none !important;
+}
+
+.btn1:hover{
+    color: #fff !important;
     transform: scale(1.05);
 }
 
-/* h3{
-    font-family: 'Poppins' sans-serif;
-} */
 
 p{
     font-family: 'Montserrat', sans-serif;
@@ -161,17 +131,6 @@ p{
 }
 
 
-.contact .contact-form .col-6,
-.contact .contact-info-item,
-.portfolio .portfolio-item,
-.section .service-item,
-.about .about-content .experience,
-.about .about-content .education,
-.about .about-content .skills,
-.about .about-content .personal-info{
-    flex: 0 0 100%;
-    max-width: 100%;
-}
 
 /* aside */
 
@@ -300,18 +259,6 @@ p{
 
 /* home */
 
-.home{
-    min-height: 100vh;
-    display: flex;
-    color: var(--text-black-900);
-}
-
-
-.home .home-info{
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-
 h3.hello{
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -322,6 +269,7 @@ h3.hello{
     letter-spacing: 1.6px;
     margin: 15px 0px;
     text-transform: uppercase;
+    color: var(--text-black-900);
 }
 
 h3.hello span{
@@ -337,6 +285,7 @@ h3.my-profession{
     font-size: 60px;
     margin: 15px 0px;
     letter-spacing: 2px;
+    color: var(--text-black-900);
 }
 
 .typing{
@@ -350,7 +299,8 @@ h3.my-profession{
 }
 
 .home .home-img{
-    display: none;
+    position: relative;
+    text-align: center;
 }
 
 .home-img::after{
@@ -376,17 +326,12 @@ h3.my-profession{
 }
 
 .home .home-img img{
-    margin: auto;
     border-radius: 5px;
     height: 400px;
 }
 
 /* About */
 
-.about .about-content{
-    flex: 0 0 100%;
-    max-width: 100%;
-}
 
 .about-me{
     padding-top: 100px;
@@ -417,10 +362,6 @@ h3.my-profession{
     color: var(--text-black-700);
 }
 
-.about .about-content .personal-info .info-item{
-    flex: 0 0 50%;
-    max-width: 50%;
-}
 
 .about .about-content .personal-info .info-item p{
     font-weight: 600;
@@ -441,7 +382,7 @@ h3.my-profession{
     margin-top: 30px;
 }
 
-.about .about-content .personal-info .buttons .btn{
+.about .about-content .personal-info .buttons .btn1{
     margin-right: 15px;
     margin-top: 10px;
 }
@@ -491,76 +432,7 @@ h3.my-profession{
     margin-bottom: 30px;
 }
 
-.about .about-content .timeline-box{
-    flex: 0 0 100%;
-    max-width: 100%;
-}
 
-.about .about-content .timeline{
-    background-color: var(--bg-black-100);
-    padding: 30px 15px;
-    border: 1px solid var(--bg-black-50);
-    border-radius: 10px;
-    width: 100%;
-    position: relative;
-}
-
-.about .about-content .timeline .timeline-item{
-    position: relative;
-    padding-left: 37px;
-    padding-bottom: 50px;
-}
-
-.about .about-content .timeline .timeline-item:last-child{
-    padding-bottom: 0;
-}
-
-.about .about-content .timeline .timeline-item::before{
-    content: '';
-    width: 1px;
-    position: absolute;
-    height: 100%;
-    left: 7px;
-    top: 0;
-    background-color: var(--skin-color);
-}
-
-.about .about-content .timeline .circle-dot{
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    background-color: var(--skin-color);
-}
-
-.about .about-content .timeline .timeline-date{
-    font-weight: 400;
-    font-size: 14px;
-    margin-bottom: 12px;
-    color: var(--text-black-700);
-}
-
-.about .about-content .timeline .timeline-date .fa{
-    margin-right: 5px;
-}
-
-.about .about-content .timeline .timeline-title{
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 15px;
-    text-transform: capitalize;
-    color: var(--text-black-900);
-}
-
-.about .about-content .timeline .timeline-text{
-    line-height: 25px;
-    font-weight: 400;
-    font-size: 16px;
-    text-align: justify;
-    color: var(--text-black-700);
-}
 
 /* service */
 .service .container{
@@ -626,19 +498,13 @@ h3.my-profession{
     padding-bottom: 40px;
 }
 
-.portfolio .portfolio-heading{
-    flex: 0 0 100%;
-    width: 100%;
-    padding-bottom: 40px;
-}
-
 .portfolio .portfolio-heading h2{
     color: var(--text-black-900);
     font-weight: 500;
     font-size: 40px;
     font-family: 'Abril Fatface', cursive;
     letter-spacing: 2px;
-    margin-right: 250px;
+    margin-right: 0px;
 }
 
 
@@ -727,33 +593,18 @@ h3.my-profession{
     height: 140px;
 }
 
-.contact .contact-form .btn{
+.contact .contact-form .btn1{
     height: 50px;
     padding: 0 50px;
 }
 
-@media (min-width: 768px){
-    .contact .contact-info-item,
-    .portfolio .portfolio-item,
-    .service .service-item{
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
+/* @media (min-width: 768px){
+
 }
 
 @media (min-width: 992px){
-    .home .home-info{
-        flex: 0 0 65%;
-        max-width: 65%;
-    }
-    .home .home-img{
-        flex: 0 0 35%;
-        max-width: 35%;
-        text-align: center;
-        position: relative;
-        display: block;
-    }
-}
+
+} */
 
 
 @media (min-width: 1200px) {
@@ -775,56 +626,21 @@ h3.my-profession{
         padding-left: 270px;
     }
 
-    .contact .contact-form .col-6{
-        flex: 0 0 50%;
-        width: 50%;
-    }
-
-    .about .about-content .personal-info{
-        flex: 0 0 60%;
-        max-width: 60%;
-        margin-top: 40px;
-    }
-
-    .about .about-content .skills{
-        flex: 0 0 40%;
-        max-width: 40%;
-        margin-top: 40px;
-    }
-
-    .about .about-content .education,
-    .about .about-content .experience
-    {
-        flex: 0 0 50%;
-        max-width: 50%;
-        margin-top: 30px;
-    }
-
     .about .about-content .personal-info .info-item p span{
         display: inline-block;
         margin-left: 4px;
     }
 
-    .service .service-item{
-        margin-bottom: 30px;
-        flex: 0 0 33.33%;
-        width: 33.33%;
+    .container{
+        width: 1100px !important;
     }
 
-    .portfolio .portfolio-item{
-        margin-bottom: 30px;
-        flex: 0 0 33.33%;
-        width: 33.33%;
+    section{
+        padding: 50px 30px !important;
     }
 
-    .contact .contact-info-item{
-        flex: 0 0 25%;
-        max-width: 25%;
-        text-align: center;
-        margin-bottom: 60px;
+    .portfolio .portfolio-heading h2{
+        margin-right: 250px !important;
     }
 
 }
-
-
-
