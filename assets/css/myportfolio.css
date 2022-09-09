@@ -141,8 +141,8 @@ p{
 }
 
 .aside .logo{
-    position: absolute;
-    top: 50px;
+    /* position: absolute;
+    top: 50px; */
     font-size: 30px;
     text-transform: capitalize;
 }
@@ -226,9 +226,9 @@ p{
     left: 0;
 }
 
-.aside .nav{
+/* .aside .nav{
     margin-top: 50px;
-}
+} */
 
 .aside .nav li{
     margin-bottom: 20px;
@@ -301,28 +301,6 @@ h3.my-profession{
 .home .home-img{
     position: relative;
     text-align: center;
-}
-
-.home-img::after{
-    content: '';
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-bottom: 10px solid var(--skin-color);
-    border-right: 10px solid var(--skin-color);
-    right: -20px;
-    bottom: -40px;
-}
-
-.home-img::before{
-    content: '';
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-top: 10px solid var(--skin-color);
-    border-left: 10px solid var(--skin-color);
-    left: -20px;
-    top: -40px;
 }
 
 .home .home-img img{
@@ -512,7 +490,7 @@ h3.my-profession{
     border: 6px solid var(--bg-black-100);
     border-radius: 10px;
     overflow: hidden;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: all 0.35 ease;
 }
 
@@ -608,6 +586,30 @@ h3.my-profession{
 
 
 @media (min-width: 1200px) {
+
+    .home-img::after{
+        content: '';
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        border-bottom: 10px solid var(--skin-color);
+        border-right: 10px solid var(--skin-color);
+        right: -20px;
+        bottom: -40px;
+    }
+    
+    .home-img::before{
+        content: '';
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        border-top: 10px solid var(--skin-color);
+        border-left: 10px solid var(--skin-color);
+        left: -20px;
+        top: -40px;
+    }
+
+
     .aside{
         width: 270px;
         background: var(--bg-black-100);
@@ -618,8 +620,8 @@ h3.my-profession{
         height: 100%;
         border-radius: 1px solid var(--bg-black-50);
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
         z-index: 10;
     }
     .main-content{
@@ -643,4 +645,115 @@ h3.my-profession{
         margin-right: 250px !important;
     }
 
+}
+
+
+
+.social-icon{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.social-icon ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .social-icon ul li {
+    list-style: none;
+    margin: 0 5px;
+  }
+  
+  .social-icon ul li a {
+    position: relative; 
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: var(--text-black-900);
+    border-radius: 50%;
+    font-size: 16px;
+    color: var(--bg-black-900);
+    transition: .5s;
+  }
+  
+  .social-icon ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--skin-color);
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+  }
+  
+  .social-icon ul li a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--skin-color);
+  }
+  
+  .social-icon ul li a:hover {
+    /* color: var(--skin-color); */
+    box-shadow: 0 0 5px var(--skin-color);
+    text-shadow: 0 0 5px var(--skin-color);
+  }
+
+
+/*All Animations*/
+
+.zoom-in {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+
+    -webkit-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
+
+.fade-in {
+    opacity:0;
+    visibility: hidden;
+
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.js-scroll {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    will-change: transform;
+}
+
+
+.portfolio-img img{
+    -webkit-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+
+.portfolio-img img:hover {
+    -webkit-transform: translate3d(0, -36%, 0);
+    transform: translate3d(0, -36%, 0);
+}
+
+.portfolio-img{
+    position: relative;
+    display: inline-block;
+    max-height: 350px;
+    overflow: hidden;
 }
